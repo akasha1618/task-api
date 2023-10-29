@@ -1,0 +1,10 @@
+faiss-cpu
+numpy
+pandas
+sentence-transformers
+fastapi
+pydantic
+langchain
+python-dotenv
+scikit-learn
+requests
