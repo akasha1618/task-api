@@ -5,7 +5,7 @@ from langchain.agents import initialize_agent, Tool
 from langchain.agents import AgentType
 from dotenv import load_dotenv
 
-#load_dotenv()
+load_dotenv()
 
 SERPAPI_API_KEY = os.getenv('SERPAPI_API_KEY')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
