@@ -10,4 +10,4 @@ index = faiss.IndexFlatL2(embeddings_np.shape[1])
 
 # Add your embeddings to the index
 index.add(embeddings_np)
-faiss.write_index(index, 'faiss_index2.index')
+faiss.write_index(index, 'faiss_index.index')

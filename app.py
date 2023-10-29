@@ -23,7 +23,7 @@ SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 
 
-data = pd.read_csv('it_support_all.csv')
+data = pd.read_csv('tasks_generated.csv')
 
 
 class TaskDescription(BaseModel):
@@ -31,7 +31,7 @@ class TaskDescription(BaseModel):
 
 app = FastAPI()
 model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
-index = faiss.read_index('faiss_index2.index')
+index = faiss.read_index('faiss_index.index')
 
 #endpoint for similarity search with faiss
 @app.post('/search/')
@@ -69,7 +69,7 @@ class TaskInput(BaseModel):
 @app.post('/serpapi')
 async def get_task_solution(task_input: TaskInput):
     task = task_input.task
-    solution = agent_executor.invoke({"input": f"Explain a solution for this IT support task: {task}"})
+    solution = agent_executor.invoke({"input": f"find a solution for the customer problem in this message: {task}"})
     return {"result": solution["output"]}
 
 #LangChain Agent with Structured ReAct and Tavily.ai web search
@@ -91,7 +91,7 @@ class TaskInput2(BaseModel):
 @app.post('/tavily')
 async def get_task_solution2(task_input2: TaskInput2):
     task2 = task_input2.task2
-    solution2 = agent_chain.run(f"Explain a solution for this IT support task: {task2}")
+    solution2 = agent_chain.run(f"find a solution for the customer problem in this message:  {task2}")
     return {"result": solution2}
 
 

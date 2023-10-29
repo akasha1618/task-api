@@ -24,10 +24,10 @@ agent_chain = initialize_agent(
     verbose=True
 )
 
-task2 = "Configuring Spam Fitlers to Reduce Unwanted Email?"
+task2 = "hey its harry and i really dont know how to hande a hardware issue again this time its laptop screen flickering intermittently any suggestions on what to do next anyone free to help"
 
 
-solution2 = agent_chain.run(f"Explain a solution for this IT support task: {task2}")
+solution2 = agent_chain.run(f"find a solution for the customer problem in this message: {task2}")
 print(solution2)
 
 

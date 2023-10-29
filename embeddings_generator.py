@@ -4,7 +4,7 @@ import pandas as pd
 
 
 # Load  dataset
-data = pd.read_csv('it_support_all.csv')
+data = pd.read_csv('preprocessed_data.csv')
 
 # Initialize the Sentence Transformer model
 model = SentenceTransformer('paraphrase-MiniLM-L6-v2')

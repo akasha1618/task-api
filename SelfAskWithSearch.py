@@ -16,7 +16,7 @@ llm = OpenAI(
     temperature = 0)
 search = SerpAPIWrapper(serpapi_api_key=SERPAPI_API_KEY)
 
-task = "Configuring Spam Filters to Reduce Unwanted Email"
+task = "hey its harry and i really dont know how to hande a hardware issue again this time its laptop screen flickering intermittently any suggestions on what to do next anyone free to help"
 
 tools = [
     Tool(
@@ -31,6 +31,6 @@ self_ask_with_search = initialize_agent(
     tools, llm, agent = AgentType.SELF_ASK_WITH_SEARCH, verbose=True
 )
 
-self_ask_with_search.run(f"Explain a solution for this IT support task:{task}"
+self_ask_with_search.run(f"find a solution for the customer problem in this message: {task}"
     
 )

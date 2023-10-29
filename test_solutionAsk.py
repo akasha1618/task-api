@@ -2,7 +2,7 @@ import requests
 
 # Task to be solved
 data = {
-    "task": "Configuring Spam Fitlers to Reduce Unwanted Email"
+    "task": "hey its harry and i really dont know how to hande a hardware issue again this time its laptop screen flickering intermittently any suggestions on what to do next anyone free to help"
 }
 
 # Sending request to the /serpapi endpoint
